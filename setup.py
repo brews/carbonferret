@@ -7,7 +7,6 @@ https://packaging.python.org/en/latest/distributing.html
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 # To use a consistent encoding
-from codecs import open
 from os import path
 
 here = path.abspath(path.dirname(__file__))
@@ -20,7 +19,7 @@ setup(
     # https://packaging.python.org/en/latest/single_source_version.html
     version='0.0.1',
 
-    description='Simple Python library to quickly query carbon reservoir records at the Marine Reservoir Correction database (http://calib.org/marine/)',
+    description='Simple Python library to quickly query carbon reservoir records at http://calib.org/marine/',
 
     # The project's main homepage.
     url='https://github.com/brews/carbonferret',
