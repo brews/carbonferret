@@ -3,6 +3,7 @@ import pandas
 
 
 def find_near(lat, lon, *, n=10):
+    """Return n results for a given latitude and longitude"""
     search_params = {'npoints': n, 'clat': lat, 'clon': lon, 
                      'Columns[]': ['Subregion', 'Notes', 'CollectionYear', 
                                    'ReservoirAge', 'ReservoirErr', 'C14age', 
@@ -15,6 +16,7 @@ def find_near(lat, lon, *, n=10):
 
 
 def _query_near(**kwargs):
+    """Query marine database with given query string values and keys"""
     url_endpoint = 'http://calib.org/marine/index.html'
     resp = None
     with requests.Session() as s:
@@ -24,11 +26,13 @@ def _query_near(**kwargs):
 
 
 def _resp_to_dataframe(x):
+    """Convert tables in HTML response, x, to list of pandas dataframes"""
     df = pandas.read_html(x.text, header=0)
     return df
 
 
 def _clean_dataframe(d):
+    """Clean response list of pandas dataframes to query results table"""
     cleaned = d[3]
     del cleaned['Unnamed: 0']
     del cleaned['Unnamed: 23']
