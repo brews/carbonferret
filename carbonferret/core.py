@@ -18,8 +18,8 @@ def find_near(lat, lon, *, n=10):
 def _query_near(**kwargs):
     """Query marine database with given query string values and keys"""
     url_endpoint = 'http://calib.org/marine/index.html'
-    resp = None
     with requests.Session() as s:
+        # Need to get the index page before query. Otherwise get bad query response that seems legit.
         s.get('http://calib.org/marine/index.html')
         resp = s.get(url_endpoint, params=kwargs)
     return resp
