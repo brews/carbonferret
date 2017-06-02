@@ -31,9 +31,9 @@ def _response_to_dataframe(x):
     return df
 
 
-def _clean_dataframe(d):
+def _clean_dataframe(df):
     """Clean response list of pandas dataframes to query results table"""
-    cleaned = d[3]
+    cleaned = df[3]
     del cleaned['Unnamed: 0']
     del cleaned['Unnamed: 23']
     return cleaned
