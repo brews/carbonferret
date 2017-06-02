@@ -1,6 +1,5 @@
 import unittest
 import carbonferret as cf
-import carbonferret.core as cfcore
 from os import path
 
 
