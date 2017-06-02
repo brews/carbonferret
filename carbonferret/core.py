@@ -10,7 +10,7 @@ def find_near(lat, lon, *, n=10):
                                    'C14err', 'LabID', 'Delta13C', 'nextime', 
                                    'Genus', 'Species', 'Feeding', 'Name']}
     resp = _query_near(**search_params)
-    df = _resp_to_dataframe(resp)
+    df = _response_to_dataframe(resp)
     df_clean = _clean_dataframe(df)
     return df_clean
 
@@ -25,7 +25,7 @@ def _query_near(**kwargs):
     return resp
 
 
-def _resp_to_dataframe(x):
+def _response_to_dataframe(x):
     """Convert tables in HTML response, x, to list of pandas dataframes"""
     df = pandas.read_html(x.text, header=0)
     return df
