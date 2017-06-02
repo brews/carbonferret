@@ -1,0 +1,5 @@
+carbonferret
+requests>=2.0
+pandas>=0.2
+beautifulsoup4>=4.0
+html5lib>=0.9
