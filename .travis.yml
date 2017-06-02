@@ -1,11 +1,12 @@
 language: python
 python:
-  - "3"
-  - "3-dev"
+  - "3.3"
+  - "3.6"
+  - "nightly"
 
 install:
-  - pip install .
-  - pip install -r requirements.txt
+  - pip install tox coverage docutils
 
 script:
+  - python setup.py check -m -r -s
   - python -m unittest
