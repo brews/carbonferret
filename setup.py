@@ -19,7 +19,7 @@ setup(
     # https://packaging.python.org/en/latest/single_source_version.html
     version='0.0.1',
 
-    description='Simple Python library to quickly query carbon reservoir records at http://calib.org/marine/',
+    description='Use Python to quickly query carbon reservoir records at http://calib.org/marine/',
 
     # The project's main homepage.
     url='https://github.com/brews/carbonferret',
