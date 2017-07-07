@@ -2,7 +2,7 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/brews/carbonferret.svg?branch=master)](https://travis-ci.org/brews/carbonferret)
 
-A Python package to quickly query carbon reservoir records at the Marine Reservoir Correction database (http://calib.org/marine/).
+A Python package to quickly fetch carbon reservoir records at the Marine Reservoir Correction database (http://calib.org/marine/).
 
 ## Example
 
