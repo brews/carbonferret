@@ -9,7 +9,11 @@ from setuptools import setup, find_packages
 # To use a consistent encoding
 from os import path
 
-here = path.abspath(path.dirname(__file__))
+
+def readme():
+    with open('README.md') as f:
+        return f.read()
+
 
 setup(
     name='carbonferret',
@@ -20,7 +24,8 @@ setup(
     version='0.0.1',
 
     description='Use Python to quickly query carbon reservoir records at http://calib.org/marine/',
-
+    long_description=readme(),
+    long_description_content_type="text/markdown",
     # The project's main homepage.
     url='https://github.com/brews/carbonferret',
 
